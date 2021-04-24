@@ -14,4 +14,10 @@ header {
 .contents {
     padding-top: 30px;
     text-align: center;
+    font-weight: bold;
+    background: #fff;
+}
+.tweet {
+    border: solid 3px #6091d3;
+    border-radius: 10px;
 }
