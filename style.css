@@ -1,6 +1,7 @@
 .site-header {
     height: 40px;
     position: fixed;
+    display: inline;
     text-align: center;
 }
 .site-body {
