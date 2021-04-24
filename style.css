@@ -1,11 +1,17 @@
-.site-header {
-    height: 40px;
-    position: fixed;
-    display: inline;
-    text-align: center;
+body {
+    padding: 0px;
+    margin: 0px;
 }
-.site-body {
-    height: 20px;
-    padding: 40px;
-    text-align: center;
+header {
+    position: fixed;
+    height: 100px;
+    width: 1000px;
+     /* margin: 50px; */
+    /* padding-top: 50px; */
+    background-color: aqua;
+    padding: 0px;
+}
+.contents {
+    padding-top: 30px;
+    margin-left: 5px;
 }
