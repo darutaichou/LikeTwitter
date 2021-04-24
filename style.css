@@ -1,8 +1,10 @@
 .site-header {
     height: 40px;
     position: fixed;
+    margin: 0 auto;
 }
 .site-body {
-    padding: 40px;
     height: 20px;
+    padding: 40px;
+    margin: 0 auto;
 }
