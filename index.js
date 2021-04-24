@@ -1,3 +1,5 @@
-const favoriteButton = document.querySelector("#favorite-Button");
+const favoriteButton = document.getElementsByClassName('favorite-button');
 
-console.log(favoriteButton);
+favoriteButton.addEventListener("click", () => {
+    console.log("Yes!");
+});
