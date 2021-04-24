@@ -1,6 +1,9 @@
 .site-header {
     width: 60px;
-    height: 500px;
+    height: 100px;
     position: fixed;
-    z-index: 500;
+    top: 500;
+}
+.site-body {
+    padding-top: 100px;
 }
