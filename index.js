@@ -1,5 +1,7 @@
-const favoriteButton = document.getElementsByClassName('favorite-button');
+const favoriteButtons = document.getElementsByClassName('favorite-button');
 
-favoriteButton.addEventListener("click", () => {
-    console.log("Yes!");
-});
+for (let index = 0; index < favoriteButtons.length; index++) {
+    favoriteButtons[index].addEventListener("click", () => {
+        console.log("Yes!");
+    });
+};
