@@ -3,8 +3,8 @@ body {
 }
 .container {
     display: grid;
-    grid-template-rows: 25% 55% 20%;
-    grid-template-columns: 25% 25% 5% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 15% 70% 15%;
     grid-template-areas: 
     "leftContents tweetBox rightContents"
     "leftContents tweetList rightContents"
