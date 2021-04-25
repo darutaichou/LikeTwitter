@@ -39,13 +39,19 @@ tweetButton.addEventListener("mouseup", () => {
 // ツイートボタンを押すとツイート一覧にツイートが増える
 tweetButton.addEventListener("click", () => {
     const tweet = document.createElement("div");
+    const tweetText = document.createElement("div");
     // テストテキスト
     const testText = document.createTextNode("てすと");
+    tweetText.appendChild(testText);
     // お気に入りボタン
     const addedFavoriteButton = document.createElement("button");
+    const favoriteText = document.createTextNode("ふぁぼ");
+    addedFavoriteButton.appendChild(favoriteText);
     addedFavoriteButton.id = "favorite-button";
     addedFavoriteButton.classList.add("favorite-button");
-    tweet.appendChild(testText);
+    console.log(addedFavoriteButton);
+    tweet.appendChild(tweetText);
+    // ツイート
     tweet.appendChild(addedFavoriteButton);
     tweet.id = "tweet";
     tweet.classList.add("tweet")
