@@ -1,31 +1,36 @@
-.container {
+body {
+    margin: 0px;
+}.container {
+    display: grid;
+    grid-template-rows: 25px 55px 20px;
+    grid-template-columns: 25px 25px 25px 25px;
+    grid-template-areas: 
+    "leftContents tweetBox rightContents"
+    "leftContents tweetList rightContents"
+    "leftContents tweetList rightContents"
+    "leftContents tweetList rightContents";
+}
+.header {
     position: fixed;
     height: 100px;
     width: 100%;
     background-color: #fff;
     padding: 0px;
-    display: grid;
-    grid-template-rows: 33% 33% 33%;
-    grid-template-columns: 100px;
-    grid-template-areas: 
-    "left center right";
 }
 .contents-list-left {
-    grid-area: left;
+    grid-area: leftContents;
 }
 .tweet-box {
-    grid-area: center;
+    grid-area: tweetBox;
 }
 .contents-list-right {
-    grid-area: right;
+    grid-area: rightContents;
 }
-body {
-    margin: 0px;
-}
-.contents {
+.tweet-list {
     padding-top: 120px;
     text-align: center;
     background: #fff;
+    grid-area: tweetList;
 }
 .tweet {
     margin: -3px 30%;
