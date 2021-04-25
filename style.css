@@ -37,6 +37,7 @@ body {
 .tweet-button {
     background-color: #00bfff;
     color: #fff;
+    box-shadow:  0 3px 0 rgba(136,136,136,1);;
     border: solid 1px #00bfff;
     border-radius: 20px;
     width: 150px;
@@ -44,6 +45,10 @@ body {
     font-size: 15px;
     font-weight: bold;
     margin-left: 550px;
+}
+.tweet-textbox:hover {
+    box-shadow: none;
+    transform: translate3d(0, 3px, 0);
 }
 .contents-list-right {
     grid-area: rightContents;
