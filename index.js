@@ -1,9 +1,35 @@
+// --- 変数定義 ---
+
 // ツイートボタン
 const tweetButton = document.getElementById('tweet-button');
+// ツイート文を入れるテキストエリア
+const tweetTextArea = document.getElementById('tweet-textbox');
+// テキストエリアのデフォルトの高さを取得
+let tweetTextAreaHeight = tweetTextArea.clientHeight;
 // お気に入りボタン
 const favoriteButtons = document.getElementsByClassName('favorite-button');
 // お気に入りボタンの色フラグ
 let pinkOrGray = "gray";
+
+
+// --- 主処理 ---
+
+// ツイートボタンを押すとボタンの色が暗くなる
+tweetButton.addEventListener("mousedown", () => {
+    tweetButton.style.backgroundColor = '#4682b4';
+})
+
+// ツイートボタンを離すとボタンの色が戻る
+tweetButton.addEventListener("mouseup", () => {
+    tweetButton.style.backgroundColor = '';
+})
+
+// ツイート分を入れるテキストエリアを可変長にする
+tweetTextArea.addEventListener('input', () => {
+    tweetTextArea.style.height = clientHeight + 'px';
+    let scrollHeight = tweetTextArea.scrollHeight;
+    tweetTextArea.style.height = scrollHeight + 'px';
+})
 
 // お気に入りボタンを押すとボタンの色が赤くなる
 // お気に入りボタンをもう一度押すとボタンの色がグレーに戻る
@@ -25,13 +51,3 @@ for (let index = 0; index < favoriteButtons.length; index++) {
         }
     });
 };
-
-// ツイートボタンを押すとボタンの色が暗くなる
-tweetButton.addEventListener("mousedown", () => {
-    tweetButton.style.backgroundColor = '#4682b4';
-})
-
-// ツイートボタンを離すとボタンの色が戻る
-tweetButton.addEventListener("mouseup", () => {
-    tweetButton.style.backgroundColor = '';
-})
