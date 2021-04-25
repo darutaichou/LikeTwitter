@@ -7,7 +7,7 @@ const tweetTextArea = document.getElementById('tweet-textbox');
 // テキストエリアのデフォルトの高さを取得
 let tweetTextAreaHeight = tweetTextArea.clientHeight;
 // ツイートボタン
-const tweetButton = document.getElementById('tweet-button');\
+const tweetButton = document.getElementById('tweet-button');
 // お気に入りボタン
 const favoriteButtons = document.getElementsByClassName('favorite-button');
 // お気に入りボタンの色フラグ
@@ -42,7 +42,7 @@ tweetButton.addEventListener("click", () => {
     // テストテキスト
     const testText = document.createTextNode("てすと");
     tweet.appendChild(testText);
-    tweetList.appendChild("tweet");
+    tweetList.appendChild(tweet);
 })
 
 
