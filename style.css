@@ -45,6 +45,9 @@ body {
     font-weight: bold;
     margin-left: 550px;
 }
+.tweet-button:hover {
+    background-color: #1e90ff;
+}
 .contents-list-right {
     grid-area: rightContents;
 }
