@@ -41,8 +41,13 @@ tweetButton.addEventListener("click", () => {
     const tweet = document.createElement("div");
     // テストテキスト
     const testText = document.createTextNode("てすと");
+    // お気に入りボタン
+    const addedFavoriteButton = document.createElement("button");
+    addedFavoriteButton.id = "favorite-button";
+    addedFavoriteButton.class = "favorite-button";
     tweet.appendChild(testText);
-    console.log(tweet);
+    tweet.id = "tweet";
+    tweet.class = "tweet"; 
     tweetList.appendChild(tweet);
 })
 
