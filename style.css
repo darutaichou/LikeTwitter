@@ -1,9 +1,10 @@
 body {
     margin: 0px;
-}.container {
+}
+.container {
     display: grid;
-    grid-template-rows: 25px 55px 20px;
-    grid-template-columns: 25px 25px 25px 25px;
+    grid-template-rows: 25% 55% 20%;
+    grid-template-columns: 25% 25% 5% 25%;
     grid-template-areas: 
     "leftContents tweetBox rightContents"
     "leftContents tweetList rightContents"
