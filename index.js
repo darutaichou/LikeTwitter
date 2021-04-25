@@ -44,10 +44,11 @@ tweetButton.addEventListener("click", () => {
     // お気に入りボタン
     const addedFavoriteButton = document.createElement("button");
     addedFavoriteButton.id = "favorite-button";
-    addedFavoriteButton.class = "favorite-button";
+    addedFavoriteButton.classList.add("favorite-button");
     tweet.appendChild(testText);
+    tweet.appendChild(addedFavoriteButton);
     tweet.id = "tweet";
-    tweet.class = "tweet"; 
+    tweet.classList.add("tweet")
     tweetList.appendChild(tweet);
 })
 
