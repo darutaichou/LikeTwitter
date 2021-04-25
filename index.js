@@ -13,6 +13,15 @@ for (let index = 0; index < favoriteButtons.length; index++) {
     });
 };
 
+// お気に入りボタンをもう一度押すとボタンの色が戻る
+for (let index = 0; index < favoriteButtons.length; index++) {
+    favoriteButtons[index].addEventListener("click", () => {
+        console.log("Favorite!");
+        favoriteButtons[index].style.color = '';
+        favoriteButtons[index].style.border = '';
+    });
+};
+
 // ツイートボタンを押すとボタンの色が暗くなる
 tweetButton.addEventListener("mousedown", ()=> {
     tweetButton.style.backgroundColor = '#4682b4';
