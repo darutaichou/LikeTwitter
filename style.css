@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    background: #fff;
 }
 .container {
     display: grid;
@@ -17,12 +18,21 @@ body {
     border: solid 3px #a9a9a9;
 }
 .tweet-textbox {
+    resize: none;
     width: 640px;
-    height: 120px;
+    height: 100px;
     font-size: 22px;
     font-weight: bold;
-    margin: 20px 40px 20px;
-    vertical-align: top;
+    margin: 20px 40px 20px; 
+    border: none;
+    outline: none;
+}
+.tweet-textbox::placeholder {
+    color: #c0c0c0;
+}
+.splid-line {
+    background-color: #c0c0c0;
+    margin: 10px 20px;
 }
 .tweet-button {
     background-color: #00bfff;
@@ -33,7 +43,6 @@ body {
     height: 40px;
     font-size: 15px;
     font-weight: bold;
-    margin-top: 10px;
     margin-left: 550px;
 }
 .contents-list-right {
@@ -41,7 +50,6 @@ body {
 }
 .tweet-list {
     text-align: center;
-    background: #fff;
     grid-area: tweetList;
 }
 .tweet {
