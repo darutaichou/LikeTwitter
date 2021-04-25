@@ -16,14 +16,11 @@ body {
     grid-area: tweetBox;
     border: solid 3px #a9a9a9;
 }
-.tweet-name {
-
-}
 .tweet-textbox {
 
 }
 .tweet-button {
-    
+
 }
 .contents-list-right {
     grid-area: rightContents;
