@@ -4,8 +4,9 @@
 const tweetButton = document.getElementById('tweet-button');
 // ツイートボックス
 const tweetBox = document.getElementById('tweet-box')
+console.log(tweetBox);
 // ツイートボックスのデフォルトの高さ
-let tweetBoxHeight = tweetBox.clientHeight;
+let tweetBoxHeight = tweetBox.style.height;
 // ツイート文を入れるテキストエリア
 const tweetTextArea = document.getElementById('tweet-textbox');
 // テキストエリアのデフォルトの高さを取得
