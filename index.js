@@ -1,23 +1,30 @@
 // --- 変数定義 ---
 
-// ツイートボタン
-const tweetButton = document.getElementById('tweet-button');
-// ツイートボックス
-const tweetBox = document.getElementById('tweet-box')
-console.log(tweetBox);
-// ツイートボックスのデフォルトの高さ
-let tweetBoxHeight = tweetBox.style.height;
+// ツイート一覧
+const tweetList = document.getElementById('tweet-list');
 // ツイート文を入れるテキストエリア
 const tweetTextArea = document.getElementById('tweet-textbox');
 // テキストエリアのデフォルトの高さを取得
 let tweetTextAreaHeight = tweetTextArea.clientHeight;
+// ツイートボタン
+const tweetButton = document.getElementById('tweet-button');\
 // お気に入りボタン
 const favoriteButtons = document.getElementsByClassName('favorite-button');
 // お気に入りボタンの色フラグ
 let pinkOrGray = "gray";
 
 
-// --- 主処理 ---
+// --- ツイート処理 ---
+
+// ツイート分を入れるテキストエリアを可変長にする
+tweetTextArea.addEventListener('input', () => {
+    // textareaの要素の高さを設定
+    tweetTextArea.style.height = tweetTextAreaHeight + 'px';
+    // textareaの入力内容の高さを取得
+    let scrollHeight = tweetTextArea.scrollHeight;
+    // textareaの高さに入力内容の高さを設定
+    tweetTextArea.style.height = scrollHeight + 'px';
+})
 
 // ツイートボタンを押すとボタンの色が暗くなる
 tweetButton.addEventListener("mousedown", () => {
@@ -29,20 +36,17 @@ tweetButton.addEventListener("mouseup", () => {
     tweetButton.style.backgroundColor = '';
 })
 
-// ツイート分を入れるテキストエリアを可変長にする
-tweetTextArea.addEventListener('input', () => {
-    // textareaの要素の高さを設定
-    tweetTextArea.style.height = tweetTextAreaHeight + 'px';
-    // textareaの入力内容の高さを取得
-    let scrollHeight = tweetTextArea.scrollHeight;
-    // textareaの高さに入力内容の高さを設定
-    tweetTextArea.style.height = scrollHeight + 'px';
-
-    // textareaのでデフォルトと設定後の差分を計算
-    const difference = scrollHeight -  tweetTextAreaHeight;
-    // ツイートボックスの高さを設定
-    tweetBox.style.height = tweetBoxHeight + difference;
+// ツイートボタンを押すとツイート一覧にツイートが増える
+tweetButton.addEventListener("click", () => {
+    const tweet = document.createElement("div");
+    // テストテキスト
+    const testText = document.createTextNode("てすと");
+    tweet.appendChild(testText);
+    tweetList.appendChild("tweet");
 })
+
+
+// --- お気に入り処理 ---
 
 // お気に入りボタンを押すとボタンの色が赤くなる
 // お気に入りボタンをもう一度押すとボタンの色がグレーに戻る
