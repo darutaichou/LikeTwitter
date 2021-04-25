@@ -42,6 +42,7 @@ tweetButton.addEventListener("click", () => {
     // テストテキスト
     const testText = document.createTextNode("てすと");
     tweet.appendChild(testText);
+    console.log(tweet);
     tweetList.appendChild(tweet);
 })
 
