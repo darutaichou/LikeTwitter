@@ -62,6 +62,7 @@ tweetButton.addEventListener("click", () => {
 
 // お気に入りボタンを押すとボタンの色が赤くなる
 // お気に入りボタンをもう一度押すとボタンの色がグレーに戻る
+// ツイートボタンが押されるたびにこの処理を読み込む
 tweetButton.addEventListener("click", () => {
     for (let index = 0; index < favoriteButtons.length; index++) {
         const favoriteButton = favoriteButtons[index];
