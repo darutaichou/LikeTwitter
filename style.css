@@ -11,7 +11,7 @@ body {
     "leftContents tweetList rightContents"
     "leftContents tweetList rightContents";
 }
-.header {
+.page-header {
     position: fixed;
     height: 100px;
     width: 100%;
@@ -19,6 +19,8 @@ body {
     padding: 0px;
 }
 .contents-list-left {
+    width: 15%;
+    height: 25%;
     grid-area: leftContents;
 }
 .tweet-box {
