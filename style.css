@@ -17,10 +17,23 @@ body {
     border: solid 3px #a9a9a9;
 }
 .tweet-textbox {
-
+    width: 640px;
+    height: 120px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px 40px 20px;
 }
 .tweet-button {
-
+    background-color: #00bfff;
+    color: #fff;
+    border: solid 1px #00bfff;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 550px;
 }
 .contents-list-right {
     grid-area: rightContents;
