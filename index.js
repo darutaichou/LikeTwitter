@@ -2,6 +2,10 @@
 
 // ツイートボタン
 const tweetButton = document.getElementById('tweet-button');
+// ツイートボックス
+const tweetBox = document.getElementById('tweet-box')
+// ツイートボックスのデフォルトの高さ
+let tweetBoxHeight = tweetBox.clientHeight;
 // ツイート文を入れるテキストエリア
 const tweetTextArea = document.getElementById('tweet-textbox');
 // テキストエリアのデフォルトの高さを取得
@@ -26,9 +30,17 @@ tweetButton.addEventListener("mouseup", () => {
 
 // ツイート分を入れるテキストエリアを可変長にする
 tweetTextArea.addEventListener('input', () => {
-    tweetTextArea.style.height = clientHeight + 'px';
+    // textareaの要素の高さを設定
+    tweetTextArea.style.height = tweetTextAreaHeight + 'px';
+    // textareaの入力内容の高さを取得
     let scrollHeight = tweetTextArea.scrollHeight;
+    // textareaの高さに入力内容の高さを設定
     tweetTextArea.style.height = scrollHeight + 'px';
+
+    // textareaのでデフォルトと設定後の差分を計算
+    const difference = scrollHeight -  tweetTextAreaHeight;
+    // ツイートボックスの高さを設定
+    tweetBox.style.height = tweetBoxHeight + difference;
 })
 
 // お気に入りボタンを押すとボタンの色が赤くなる

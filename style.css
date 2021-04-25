@@ -16,6 +16,7 @@ body {
 .tweet-box {
     grid-area: tweetBox;
     border: solid 3px #a9a9a9;
+    height: auto;
 }
 .tweet-textbox {
     resize: none;
