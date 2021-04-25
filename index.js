@@ -49,7 +49,6 @@ tweetButton.addEventListener("click", () => {
     addedFavoriteButton.appendChild(favoriteText);
     addedFavoriteButton.id = "favorite-button";
     addedFavoriteButton.classList.add("favorite-button");
-    console.log(addedFavoriteButton);
     tweet.appendChild(tweetText);
     // ツイート
     tweet.appendChild(addedFavoriteButton);
@@ -63,21 +62,22 @@ tweetButton.addEventListener("click", () => {
 
 // お気に入りボタンを押すとボタンの色が赤くなる
 // お気に入りボタンをもう一度押すとボタンの色がグレーに戻る
-for (let index = 0; index < favoriteButtons.length; index++) {
-    const favoriteButton = favoriteButtons[index];
-    favoriteButton.addEventListener("click", () => {
-        console.log(pinkOrGray);
-        switch (pinkOrGray) {
-            case "gray":
-                favoriteButton.style.color = '#ff69b4';
-                favoriteButton.style.borderColor = '#ff69b4';
-                pinkOrGray = "pink";
-                break;
-            case "pink":
-                favoriteButton.style.color = '#c0c0c0';
-                favoriteButton.style.borderColor = '#c0c0c0';
-                pinkOrGray = "gray";
-                break;
-        }
-    });
-};
+tweetButton.addEventListener("click", () => {
+    for (let index = 0; index < favoriteButtons.length; index++) {
+        const favoriteButton = favoriteButtons[index];
+        favoriteButton.addEventListener("click", () => {
+            switch (pinkOrGray) {
+                case "gray":
+                    favoriteButton.style.color = '#ff69b4';
+                    favoriteButton.style.borderColor = '#ff69b4';
+                    pinkOrGray = "pink";
+                    break;
+                case "pink":
+                    favoriteButton.style.color = '#c0c0c0';
+                    favoriteButton.style.borderColor = '#c0c0c0';
+                    pinkOrGray = "gray";
+                    break;
+            }
+        });
+    };
+});
