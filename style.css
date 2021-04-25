@@ -5,8 +5,10 @@
     background-color: #fff;
     padding: 0px;
     display: grid;
-    grid-template: 
-    "left center center right" 100px;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 100px;
+    grid-template-areas: 
+    "left center right";
 }
 .contents-list-left {
     grid-area: left;
