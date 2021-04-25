@@ -3,25 +3,30 @@ body {
 }
 .container {
     display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 22% 48% 30%;
     grid-template-areas: 
     "leftContents tweetBox rightContents"
-    "leftContents tweetList rightContents"
-    "leftContents tweetList rightContents"
     "leftContents tweetList rightContents";
 }
 .contents-list-left {
     grid-area: leftContents;
-    border: solid 3px #a9a9a9;
 }
 .tweet-box {
     grid-area: tweetBox;
     border: solid 3px #a9a9a9;
 }
+.tweet-name {
+
+}
+.tweet-textbox {
+
+}
+.tweet-button {
+    
+}
 .contents-list-right {
     grid-area: rightContents;
-    border: solid 3px #a9a9a9;
 }
 .tweet-list {
     text-align: center;
@@ -29,10 +34,9 @@ body {
     grid-area: tweetList;
 }
 .tweet {
-    margin: -3px 30%;
+    margin-top: -3px;
     height: 80px;
     border: solid 3px #a9a9a9;
-    border-radius: 10px;
 }
 .favorite-button {
     color: #c0c0c0;
