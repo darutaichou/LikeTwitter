@@ -21,15 +21,8 @@ header {
     border-radius: 10px;
 }
 .favorite-button {
-    color: #00bfff;
-    border: solid 1px #87cdfa;
+    color: #c0c0c0;
+    border: solid 1px #c0c0c0;
     margin-top: 25px;
     margin-left: 150px;
 }
-/* input[type=radio]{
-    display: none;
-}
-:checked + button{
-    color: #ff1493;
-    border: solid 1px #ff69b4;
-} */
