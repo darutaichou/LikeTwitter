@@ -41,9 +41,10 @@ tweetTextBox.addEventListener('input', () => {
     // textareaの高さに入力内容の高さを設定
     tweetTextBox.style.height = scrollHeight + 'px';
 
-    // ツイートボックス内のツイート文の文字数を取得
-    tweetTextBoxLength = tweetTextBox.value.length;
-    
+    // ツイート文が140文字より多い時にボタンを非活性化する
+    if (tweetTextBox.value.length > 141) {
+        deacitivateButton(tweetButton);
+    }
 })
 
 // ツイート文の文字数が「0文字」か、「141文字以上」の時、ボタンを非活性にする
