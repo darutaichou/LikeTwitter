@@ -53,7 +53,7 @@ body {
     grid-area: rightContents;
 }
 .tweet-list {
-    text-align: center;
+    text-align: left;
     grid-area: tweetList;
 }
 .tweet {
