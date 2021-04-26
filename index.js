@@ -79,9 +79,10 @@ tweetButton.addEventListener("click", () => {
     const addedFavoriteButton = document.createElement("button");
     const tweet = document.createElement("div");
     // テストテキスト
-    const tweetTextNode = tweetTextBox.value;
-    tweetTexts.value = tweetTextNode;
+    const tweetTextBoxNode = tweetTextBox.value;
+    tweetTexts.value = tweetTextBoxNode;
     console.log(tweetTexts.value);
+    tweetTexts.innerHTML = tweetTexts.value;
     tweetTexts.classList.add("tweet-texts");
     tweetTexts.id="tweet-texts";
     // お気に入りボタン
@@ -89,7 +90,7 @@ tweetButton.addEventListener("click", () => {
     addedFavoriteButton.appendChild(favoriteText);
     addedFavoriteButton.id = "favorite-button";
     addedFavoriteButton.classList.add("favorite-button");
-    tweet.appendChild(tweetTexts.value);
+    tweet.appendChild(tweetTexts);
     // ツイート
     tweet.appendChild(addedFavoriteButton);
     tweet.id = "tweet";
