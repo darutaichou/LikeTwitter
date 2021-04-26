@@ -26,7 +26,6 @@ function acitivateButton(button) {
 // ボタンを非活性化する
 function deacitivateButton(button) {
     button.disabled = true;
-    button.classList.add("inactive-tweet-button")
 }
 
 // --- メイン処理 ---
@@ -34,6 +33,9 @@ function deacitivateButton(button) {
 // ツイートボックス内のツイート分が0文字の時にボタンを非活性化する
 if (tweetTextBox.value.length === 0) {
     deacitivateButton(tweetButton);
+    tweetButton.style.backgroundColor = '#87ceeb';
+    tweetButton.style.border = '#87ceeb';
+    tweetButton.style.color = '#e0ffff';
 }
 
 // ツイート文を入れるテキストエリアを可変長にする
@@ -46,16 +48,18 @@ tweetTextBox.addEventListener('input', () => {
     tweetTextBox.style.height = scrollHeight + 'px';
 
     // ツイート文が140文字より多い時にボタンを非活性化する
-    if (tweetTextBox.value.length > 141) {
+    if (tweetTextBox.value.length > 141 || tweetTextBox.value.length === 0) {
         deacitivateButton(tweetButton);
-        button.classList.add("inactive-tweet-button")
+        tweetButton.style.backgroundColor = '#87ceeb';
+        tweetButton.style.border = '#87ceeb';
+        tweetButton.style.color = '#e0ffff';
     } else {
         acitivateButton(tweetButton);
+        tweetButton.style.backgroundColor = '';
+        tweetButton.style.border = '';
+        tweetButton.style.color = '';
     }
 })
-
-// ツイート文の文字数が「0文字」か、「141文字以上」の時、ボタンを非活性にする
-
 
 // ツイートボタンを押すとボタンの色が暗くなる
 tweetButton.addEventListener("mousedown", () => {
