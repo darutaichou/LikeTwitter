@@ -74,11 +74,11 @@ tweetButton.addEventListener("mouseup", () => {
 // ツイートを投稿する
 // ツイートボタンを押すとツイート一覧にツイートが増える
 tweetButton.addEventListener("click", () => {
-    // 要素作成：テストテキスト、お気に入りボタン、ツイート
+    // 要素作成：ツイートテキスト、お気に入りボタン、ツイート
     const tweetTexts = document.createElement("div");
     const addedFavoriteButton = document.createElement("button");
     const tweet = document.createElement("div");
-    // テストテキスト
+    // ツイートテキスト
     const tweetTextBoxNode = tweetTextBox.value;
     tweetTexts.value = tweetTextBoxNode;
     console.log(tweetTexts.value);
