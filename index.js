@@ -3,9 +3,11 @@
 // ツイート一覧
 const tweetList = document.getElementById('tweet-list');
 // ツイート文を入れるテキストエリア
-const tweetTextArea = document.getElementById('tweet-textbox');
+const tweetTextBox = document.getElementById('tweet-textbox');
 // テキストエリアのデフォルトの高さを取得
-let tweetTextAreaHeight = tweetTextArea.clientHeight;
+let tweetTextBoxHeight = tweetTextBox.clientHeight;
+// ツイートボックス内のツイート分の文字数
+let tweetTextBoxLength;
 // ツイートボタン
 const tweetButton = document.getElementById('tweet-button');
 // お気に入りボタン
@@ -16,15 +18,22 @@ let pinkOrGray = "gray";
 
 // --- ツイート処理 ---
 
-// ツイート分を入れるテキストエリアを可変長にする
-tweetTextArea.addEventListener('input', () => {
+// ツイート文を入れるテキストエリアを可変長にする
+tweetTextBox.addEventListener('input', () => {
     // textareaの要素の高さを設定
-    tweetTextArea.style.height = tweetTextAreaHeight + 'px';
+    tweetTextBox.style.height = tweetTextBoxHeight + 'px';
     // textareaの入力内容の高さを取得
-    let scrollHeight = tweetTextArea.scrollHeight;
+    let scrollHeight = tweetTextBox.scrollHeight;
     // textareaの高さに入力内容の高さを設定
-    tweetTextArea.style.height = scrollHeight + 'px';
+    tweetTextBox.style.height = scrollHeight + 'px';
+
+    // ツイートボックス内のツイート文の文字数を取得
+    tweetTextBoxLength = tweetTextBox.length;
+    console.log(tweetTextBoxLength);
 })
+
+// ツイート文の文字数が「0文字」か、「141文字以上」の時、ボタンを非活性にする
+
 
 // ツイートボタンを押すとボタンの色が暗くなる
 tweetButton.addEventListener("mousedown", () => {
