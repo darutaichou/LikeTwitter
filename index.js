@@ -93,7 +93,7 @@ tweetButton.addEventListener("click", () => {
     tweet.appendChild(addedFavoriteButton);
     tweet.id = "tweet";
     tweet.classList.add("tweet")
-    tweetList.appendChild(tweet);
+    tweetList.prepend(tweet);
 })
 
 
