@@ -6,8 +6,6 @@ const tweetList = document.getElementById('tweet-list');
 const tweetTextBox = document.getElementById('tweet-textbox');
 // テキストエリアのデフォルトの高さを取得
 let tweetTextBoxHeight = tweetTextBox.clientHeight;
-// ツイートボックス内のツイート分の文字数
-let tweetTextBoxLength;
 // ツイートボタン
 const tweetButton = document.getElementById('tweet-button');
 // お気に入りボタン
@@ -20,9 +18,15 @@ let pinkOrGray = "gray";
 
 // --- 関数定義 ---
 
-// ボタンを非活性にする
+// ボタンを活性化する
+function acitivateButton(button) {
+    button.disabled = false;
+}
+
+// ボタンを非活性化する
 function deacitivateButton(button) {
     button.disabled = true;
+    button.classList.add("inactive-tweet-button")
 }
 
 // --- メイン処理 ---
@@ -44,6 +48,9 @@ tweetTextBox.addEventListener('input', () => {
     // ツイート文が140文字より多い時にボタンを非活性化する
     if (tweetTextBox.value.length > 141) {
         deacitivateButton(tweetButton);
+        button.classList.add("inactive-tweet-button")
+    } else {
+        acitivateButton(tweetButton);
     }
 })
 
@@ -63,21 +70,22 @@ tweetButton.addEventListener("mouseup", () => {
 // ツイートを投稿する
 // ツイートボタンを押すとツイート一覧にツイートが増える
 tweetButton.addEventListener("click", () => {
-    // テストテキスト
+    // 要素作成：テストテキスト、お気に入りボタン、ツイート
     const tweetTexts = document.createElement("div");
+    const addedFavoriteButton = document.createElement("button");
+    const tweet = document.createElement("div");
+    // テストテキスト
     const testTexts = document.createTextNode("てすと");
     tweetTexts.appendChild(testTexts);
     tweetTexts.classList.add("tweet-texts");
     tweetTexts.id="tweet-texts";
     // お気に入りボタン
-    const addedFavoriteButton = document.createElement("button");
     const favoriteText = document.createTextNode("ふぁぼ");
     addedFavoriteButton.appendChild(favoriteText);
     addedFavoriteButton.id = "favorite-button";
     addedFavoriteButton.classList.add("favorite-button");
     tweet.appendChild(tweetTexts);
     // ツイート
-    const tweet = document.createElement("div");
     tweet.appendChild(addedFavoriteButton);
     tweet.id = "tweet";
     tweet.classList.add("tweet")
