@@ -79,8 +79,8 @@ tweetButton.addEventListener("click", () => {
     const addedFavoriteButton = document.createElement("button");
     const tweet = document.createElement("div");
     // テストテキスト
-    const testTexts = document.createTextNode("てすと");
-    tweetTexts.appendChild(testTexts);
+    const tweetTextNode = tweetTextBox.value;
+    tweetTexts.appendChild(tweetTextNode);
     tweetTexts.classList.add("tweet-texts");
     tweetTexts.id="tweet-texts";
     // お気に入りボタン
