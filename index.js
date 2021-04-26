@@ -36,21 +36,24 @@ tweetButton.addEventListener("mouseup", () => {
     tweetButton.style.backgroundColor = '';
 })
 
+// ツイートを投稿する
 // ツイートボタンを押すとツイート一覧にツイートが増える
 tweetButton.addEventListener("click", () => {
-    const tweet = document.createElement("div");
-    const tweetText = document.createElement("div");
     // テストテキスト
-    const testText = document.createTextNode("てすと");
-    tweetText.appendChild(testText);
+    const tweetTexts = document.createElement("div");
+    const testTexts = document.createTextNode("てすと");
+    tweetTexts.appendChild(testTexts);
+    tweetTexts.classList.add("tweet-texts");
+    tweetTexts.id="tweet-texts";
     // お気に入りボタン
     const addedFavoriteButton = document.createElement("button");
     const favoriteText = document.createTextNode("ふぁぼ");
     addedFavoriteButton.appendChild(favoriteText);
     addedFavoriteButton.id = "favorite-button";
     addedFavoriteButton.classList.add("favorite-button");
-    tweet.appendChild(tweetText);
+    tweet.appendChild(tweetTexts);
     // ツイート
+    const tweet = document.createElement("div");
     tweet.appendChild(addedFavoriteButton);
     tweet.id = "tweet";
     tweet.classList.add("tweet")
