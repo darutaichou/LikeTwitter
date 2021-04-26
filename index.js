@@ -16,7 +16,21 @@ const favoriteButtons = document.getElementsByClassName('favorite-button');
 let pinkOrGray = "gray";
 
 
-// --- ツイート処理 ---
+// ##### ツイート処理 #####
+
+// --- 関数定義 ---
+
+// ボタンを非活性にする
+function deacitivateButton(button) {
+    button.disabled = true;
+}
+
+// --- メイン処理 ---
+
+// ツイートボックス内のツイート分が0文字の時にボタンを非活性化する
+if (tweetTextBox.value.length === 0) {
+    deacitivateButton(tweetButton);
+}
 
 // ツイート文を入れるテキストエリアを可変長にする
 tweetTextBox.addEventListener('input', () => {
@@ -28,8 +42,8 @@ tweetTextBox.addEventListener('input', () => {
     tweetTextBox.style.height = scrollHeight + 'px';
 
     // ツイートボックス内のツイート文の文字数を取得
-    tweetTextBoxLength = tweetTextBox.length;
-    console.log(tweetTextBoxLength);
+    tweetTextBoxLength = tweetTextBox.value.length;
+    
 })
 
 // ツイート文の文字数が「0文字」か、「141文字以上」の時、ボタンを非活性にする
@@ -70,7 +84,7 @@ tweetButton.addEventListener("click", () => {
 })
 
 
-// --- お気に入り処理 ---
+// ##### お気に入り処理 #####
 
 // お気に入りボタンを押すとボタンの色が赤くなる
 // お気に入りボタンをもう一度押すとボタンの色がグレーに戻る
