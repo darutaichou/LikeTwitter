@@ -53,7 +53,6 @@ body {
     grid-area: rightContents;
 }
 .tweet-list {
-    text-align: left;
     grid-area: tweetList;
 }
 .tweet {
@@ -61,7 +60,11 @@ body {
     height: 80px;
     border: solid 3px #a9a9a9;
 }
+.tweet-texts {
+    text-align: left;
+}
 .favorite-button {
+    text-align: center;
     color: #c0c0c0;
     border: solid 1px #c0c0c0;
     margin-top: 25px;
