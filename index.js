@@ -74,14 +74,19 @@ tweetButton.addEventListener("mouseup", () => {
 // ツイートを投稿する
 // ツイートボタンを押すとツイート一覧にツイートが増える
 tweetButton.addEventListener("click", () => {
-    // 要素作成：ツイートテキスト、お気に入りボタン、ツイート
+    // 要素作成：名前ラベル、ツイートテキスト、お気に入りボタン、ツイート
+    const nameLabel = document.createElement("label");
     const tweetTexts = document.createElement("div");
     const addedFavoriteButton = document.createElement("button");
     const tweet = document.createElement("div");
+    // 名前ラベル
+    nameLabel.innerHTML = "風吹けば名無し";
+    nameLabel.classList.add("name-label");
+    nameLabel.id = "name-label";
+    tweet.appendChild(nameLabel);
     // ツイートテキスト
     const tweetTextBoxNode = tweetTextBox.value;
     tweetTexts.value = tweetTextBoxNode;
-    console.log(tweetTexts.value);
     tweetTexts.innerHTML = tweetTexts.value;
     tweetTexts.classList.add("tweet-texts");
     tweetTexts.id="tweet-texts";
