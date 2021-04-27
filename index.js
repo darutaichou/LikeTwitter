@@ -96,6 +96,8 @@ tweetButton.addEventListener("click", () => {
     tweet.id = "tweet";
     tweet.classList.add("tweet")
     tweetList.prepend(tweet);
+    // ツイートボックスの中身を空にする
+    tweetTextBox.value = '';
 })
 
 
