@@ -48,7 +48,7 @@ tweetTextBox.addEventListener('input', () => {
     tweetTextBox.style.height = scrollHeight + 'px';
 
     // ツイート文が140文字より多い時、もしくはツイート文の削除等で0文字に戻ったときにボタンを非活性化する
-    if (tweetTextBox.value.length > 141 || tweetTextBox.value.length === 0) {
+    if (tweetTextBox.value.length > 141 || tweetTextBox.value === '') {
         deacitivateButton(tweetButton);
         tweetButton.style.backgroundColor = '#87ceeb';
         tweetButton.style.border = '#87ceeb';
