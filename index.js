@@ -89,7 +89,7 @@ tweetButton.addEventListener("click", () => {
     tweetTexts.value = tweetTextBoxNode;
     tweetTexts.innerHTML = tweetTexts.value;
     tweetTexts.classList.add("tweet-texts");
-    tweetTexts.id="tweet-texts";
+    tweetTexts.id = "tweet-texts";
     // お気に入りボタン
     const favoriteText = document.createTextNode("ふぁぼ");
     addedFavoriteButton.appendChild(favoriteText);
@@ -102,7 +102,11 @@ tweetButton.addEventListener("click", () => {
     tweet.classList.add("tweet")
     tweetList.prepend(tweet);
     // ツイートボックスの中身を空にする
-    tweetTextBox.value = null;
+    tweetTextBox.value = '';
+    deacitivateButton(tweetButton);
+    tweetButton.style.backgroundColor = '#87ceeb';
+    tweetButton.style.border = '#87ceeb';
+    tweetButton.style.color = '#e0ffff';
 })
 
 
