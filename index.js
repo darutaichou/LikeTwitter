@@ -31,7 +31,7 @@ function deacitivateButton(button) {
 // --- メイン処理 ---
 
 // ツイートボックス内のツイート分が0文字の時にボタンを非活性化する
-if (tweetTextBox.value.length === 0) {
+if (tweetTextBox.value === '') {
     deacitivateButton(tweetButton);
     tweetButton.style.backgroundColor = '#87ceeb';
     tweetButton.style.border = '#87ceeb';
@@ -47,7 +47,7 @@ tweetTextBox.addEventListener('input', () => {
     // textareaの高さに入力内容の高さを設定
     tweetTextBox.style.height = scrollHeight + 'px';
 
-    // ツイート文が140文字より多い時にボタンを非活性化する
+    // ツイート文が140文字より多い時、もしくはツイート文の削除等で0文字に戻ったときにボタンを非活性化する
     if (tweetTextBox.value.length > 141 || tweetTextBox.value.length === 0) {
         deacitivateButton(tweetButton);
         tweetButton.style.backgroundColor = '#87ceeb';
@@ -102,7 +102,7 @@ tweetButton.addEventListener("click", () => {
     tweet.classList.add("tweet")
     tweetList.prepend(tweet);
     // ツイートボックスの中身を空にする
-    tweetTextBox.value = '';
+    tweetTextBox.value = null;
 })
 
 

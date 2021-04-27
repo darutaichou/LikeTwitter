@@ -55,7 +55,6 @@ body {
     grid-area: rightContents;
 }
 .tweet-list {
-    text-align: center;
     grid-area: tweetList;
 }
 .split-box {
@@ -73,17 +72,15 @@ body {
     font-size: 20px;
 }
 .name-label {
-    text-align: left;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 .tweet-texts {
-    text-align: left;
     margin-left: 30px;
 }
 .favorite-button {
     color: #dcdcdc;
     border: solid 1px #dcdcdc;
     margin-bottom: 10px;
-    margin-left: 150px;
+    margin-left: 450px;
 }
