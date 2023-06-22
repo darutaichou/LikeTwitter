@@ -1,36 +1,38 @@
+<!-- Like Twitter -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Like Twitter</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Grid Template用のコンテナ -->
     <div class="container" id="container">
-        <!-- 話題の検索等のコンテンツ -->
-        <div class="contents-list-left">実装前</div>
-        <!-- ツイートボックス -->
-        <div class="tweet-box" id="tweet-box">
-            <div class="tweet-textbox-area">
-                <textarea class="tweet-textbox" id="tweet-textbox" placeholder="いまどうしてる？"></textarea>
-            </div>
-            <hr class="splid-line" id="splid-line" size="1px">
-            <button class="tweet-button" id="tweet-button">ツイートする</button>
+      <!-- 話題の検索等のコンテンツ -->
+      <div class="contents-list-left">実装前</div>
+      <!-- ツイートボックス -->
+      <div class="tweet-box" id="tweet-box">
+        <div class="tweet-textbox-area">
+          <textarea
+            class="tweet-textbox"
+            id="tweet-textbox"
+            placeholder="いまどうしてる？"
+          ></textarea>
         </div>
-        <!-- ツイートボックスとツイート一覧の境目ボックス -->
-        <div class="split-box" id="split-box"></div>
-        <!-- オススメ等のコンテンツ -->
-        <div class="contents-list-right">実装前</div>
-        <!-- ツイート一覧 -->
-        <div class="tweet-list" id="tweet-list">
-        </div>
+        <hr class="splid-line" id="splid-line" size="1px" />
+        <button class="tweet-button" id="tweet-button">ツイートする</button>
+      </div>
+      <!-- ツイートボックスとツイート一覧の境目ボックス -->
+      <div class="split-box" id="split-box"></div>
+      <!-- オススメ等のコンテンツ -->
+      <div class="contents-list-right">実装前</div>
+      <!-- ツイート一覧 -->
+      <div class="tweet-list" id="tweet-list"></div>
     </div>
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>
